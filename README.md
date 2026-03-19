@@ -1,16 +1,90 @@
-# React + Vite
+# ⚡ TechStore Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-19.0-61DAFB?logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.0-646CFF?logo=vite)](https://vitejs.dev/)
 
-Currently, two official plugins are available:
+**TechStore Pro** is a premium, modern e-commerce platform designed for high-tech gadgets and accessories. Built with a focus on performance and a unique "Industrial Aesthetic," it offers a seamless browsing experience for tech enthusiasts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- 🏗️ **Industrial Design System**: A custom-built CSS framework featuring a serious, robust "Industrial Palette" (Charcoal, Carbon, and Safety Orange).
+- 📱 **Fully Responsive**: Optimized for all devices, from high-res monitors to mobile screens.
+- 🛍️ **Dynamic Product Showcase**: An infinite, smooth-scrolling product slider for featured items.
+- 🗺️ **Advanced Routing**: Seamless page transitions and deep linking powered by React Router.
+- 🎨 **Modular Component Architecture**: Highly reusable, clean, and maintainable React components.
+- ⚡ **Turbo-charged Performance**: Blazing fast HMR and build times thanks to Vite and SWC.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Core**: [React 19](https://reactjs.org/)
+- **Build Tool**: [Vite 7](https://vitejs.dev/) with [SWC](https://swc.rs/)
+- **Navigation**: [React Router 7](https://reactrouter.com/)
+- **Styling**: Vanilla CSS (Custom CSS Variable System)
+- **Code Quality**: [ESLint](https://eslint.org/)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/cbellet-dev/TechStore.git
+   cd TechStore
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── assets/         # Static images and brand assets
+├── components/     # Reusable UI components (Modals, Sliders, Pages)
+├── data/           # Mock product data and content masters
+├── styles/         # Component-specific stylesheets
+└── main.jsx        # Application entry point
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 Author
+
+**Cesc Bellet**
+- GitHub: [@cbellet-dev](https://github.com/cbellet-dev)
+
+---
+
+*Made with ❤️ for the tech community.*

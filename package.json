@@ -1,7 +1,21 @@
 {
-  "name": "techstore",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tech-store-pro",
+  "version": "1.0.0",
+  "description": "A premium modern e-commerce platform for high-tech gadgets and accessories, built with React and Vite.",
+  "author": "Cesc Bellet",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbellet-dev/TechStore.git"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "ecommerce",
+    "tech-store",
+    "modern-ui",
+    "responsive"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
