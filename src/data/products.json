@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Headphones",
+        "image": "headphones.png",
+        "price": "$19.99"
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "image": "smartphone.png",
+        "price": "$29.99"
+    },
+    {
+        "id": 3,
+        "name": "Laptop",
+        "image": "laptop.png",
+        "price": "$39.99"
+    },
+    {
+        "id": 4,
+        "name": "Smartwatch",
+        "image": "smartwatch.png",
+        "price": "$49.99"
+    },
+    {
+        "id": 5,
+        "name": "Earbuds",
+        "image": "earbuds.png",
+        "price": "$59.99"
+    }
+]

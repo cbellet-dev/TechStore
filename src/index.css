@@ -1,0 +1,261 @@
+:root {
+  /* --- PALETA INDUSTRIAL --- */
+  /* Colores sólidos y serios */
+  --primary-color: #ff6b35;
+  /* Naranja industrial para acciones */
+  --primary-hover: #e55a2b;
+  /* Naranja oscuro para hover */
+
+  --bg-dark: #1a1a1a;
+  /* Negro carbón */
+  --bg-medium: #2d2d2d;
+  /* Gris oscuro */
+  --bg-light: #3a3a3a;
+  /* Gris medio */
+
+  --text-main: #ffffff;
+  /* Blanco puro para contraste */
+  --text-secondary: #b0b0b0;
+  /* Gris claro para texto secundario */
+  --text-muted: #707070;
+  /* Gris para textos menos importantes */
+
+  --bg-body: #f5f5f5;
+  /* Gris muy claro para el fondo */
+  --bg-alt: #e8e8e8;
+  /* Gris claro para secciones alternas */
+  --border-color: #333333;
+  /* Bordes oscuros y definidos */
+  --accent-yellow: #ffa500;
+  /* Amarillo industrial */
+
+  /* --- ESPACIADO Y TAMAÑOS --- */
+  --container-width: 1200px;
+  --radius-sm: 0px;
+  /* Sin bordes redondeados para look industrial */
+  --radius-md: 2px;
+  /* Mínimo radio */
+
+  /* --- TIPOGRAFÍA --- */
+  /* Fuentes geométricas y robustas */
+  --font-family: 'Rajdhani', 'Arial Narrow', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+}
+
+/* --- RESET BÁSICO --- */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- TEXTOS --- */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* --- HEADERS --- */
+header {
+  background: var(--bg-dark);
+  border-bottom: 3px solid var(--primary-color);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo con estilo industrial */
+header h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+
+/* --- BODYS --- */
+body {
+  font-family: var(--font-family);
+  background: var(--bg-body);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  color: #1a1a1a;
+  line-height: 1.6;
+  margin-top: 20px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: var(--font-weight-normal);
+}
+
+/* --- JERARQUÍA TIPOGRÁFICA --- */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--bg-dark);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--bg-dark);
+}
+
+p {
+  margin-bottom: 20px;
+  margin-top: 35px;
+  color: #4a4a4a;
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+}
+
+/* --- UTILIDADES DE LAYOUT --- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+  background: transparent;
+}
+
+.section-alt {
+  background: var(--bg-alt);
+  padding: 80px 0;
+  border-radius: var(--radius-md);
+  margin: 20px 0;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* --- COMPONENTES: BOTONES --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 0 var(--primary-hover);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 var(--primary-hover);
+}
+
+.btn-secondary {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-medium);
+  border-color: var(--primary-color);
+  transform: translateY(1px);
+}
+
+/* Card sólida */
+.card {
+  background: white;
+  border: 2px solid var(--border-color);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* --- INTEGRACIÓN CON EL SLIDER (Ajuste visual) --- */
+.slider-container {
+  background: transparent;
+  padding: 60px 0;
+  border-radius: var(--radius-md);
+}
+
+/* Degradado para ocultar bordes */
+.slider-container::before {
+  background: linear-gradient(to right, var(--bg-body), transparent);
+}
+
+.slider-container::after {
+  background: linear-gradient(to left, var(--bg-body), transparent);
+}
+
+/* --- FOOTER --- */
+footer {
+  background: var(--bg-dark);
+  border-top: 3px solid var(--primary-color);
+  padding: 30px 0;
+  margin-top: auto;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+  font-weight: var(--font-weight-normal);
+}
+
+/* Para asegurar que el footer esté siempre abajo */
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  /* El main ocupa todo el espacio disponible */
+}

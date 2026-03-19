@@ -1,0 +1,137 @@
+/* El contenedor oculta lo que se desborda */
+.slider-container {
+    overflow: hidden;
+    background: transparent;
+    padding: 40px 0;
+    margin: 40px 0;
+    white-space: nowrap;
+    /* Asegura que todo esté en una línea */
+    position: relative;
+    border-radius: var(--radius-md);
+}
+
+
+.slide-content {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Aligns button to bottom, text to top */
+    text-align: center;
+}
+
+.slide-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text-main);
+}
+
+.slide-content p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.slide-content button {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    padding: 10px;
+    transition: all 0.2s ease;
+    /* Styles are inherited from .btn-secondary in index.css, 
+       but we ensure full width here */
+}
+
+/* degradado a los lados para suavizar la entrada/salida */
+.slider-container::before,
+.slider-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    /* Allow clicking through gradients if needed */
+}
+
+.slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-gradient-start), transparent);
+}
+
+.slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-gradient-start), transparent);
+}
+
+/* La pista que contiene todos los elementos */
+.slider-track {
+    display: flex;
+    width: max-content;
+    gap: 0;
+    /* Sin gap adicional, solo el margin de .slide */
+    /* Ajusta la duración (25s) para cambiar la velocidad */
+    animation: scroll 25s linear infinite;
+    will-change: transform;
+    /* Optimización de rendimiento */
+}
+
+/* Detener la animación al pasar el mouse por encima (Opcional) */
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+
+
+/* Elementos individuales con estilo industrial */
+.slide {
+    flex-shrink: 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 24px;
+    width: 260px;
+    height: 400px;
+    border-radius: var(--radius-md);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: 2px solid #333333;
+    transition: all 0.3s ease;
+}
+
+.slide:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.slide img {
+    height: 180px;
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.slide:hover img {
+    transform: scale(1.05);
+}
+
+/* La animación clave - ahora movemos 33.33% porque tenemos 3 sets */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Movemos exactamente un tercio (33.33%) ya que tenemos 3 copias de las imágenes
+           Esto crea un loop perfecto sin saltos visibles */
+        transform: translateX(calc(-100% / 3));
+    }
+}
